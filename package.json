@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && jsmin -o ./lib/index.js ./lib/index.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "lib"
@@ -34,11 +36,23 @@
   },
   "homepage": "https://github.com/giridharangm/react-media-recorder#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "@types/dom-mediacapture-record": "^1.0.2",
     "@types/node": "^12.12.11",
     "@types/react": "^16.9.11",
+    "babel-loader": "^8.0.6",
     "jsmin": "^1.0.1",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.1",
     "typescript": "^3.7.2"
   },
-  "types": "./lib/index.d.ts"
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@material-ui/core": "^4.8.2",
+    "@material-ui/icons": "^4.5.1"
+  }
 }
